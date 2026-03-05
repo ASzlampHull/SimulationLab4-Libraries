@@ -48,5 +48,25 @@ void SphereCollider::CalculateCollision(Collider* other, glm::vec3& velocity)
 				velocity -= vDotN * collisionNormal;
 			}
 		}
+		/*Transformations sphereTransformations;
+		GetTransformations(sphereTransformations);
+		Transformations otherSphereTransformations;
+		sphereCollider->GetTransformations(otherSphereTransformations);
+		SphereToSphere sphereA(sphereTransformations.position, radius); 
+		SphereToSphere sphereB(otherSphereTransformations.position, sphereCollider->GetRadius());
+		if (sphereA.Intersects(sphereB)) {
+			glm::vec3 delta = sphereTransformations.position - otherSphereTransformations.position;
+			float distance = glm::length(delta);
+			float penetrationDepth = radius + sphereCollider->GetRadius() - distance;
+			if (penetrationDepth > 0) {
+				glm::vec3 collisionNormal = glm::normalize(delta);
+				sphereTransformations.position += collisionNormal * penetrationDepth;
+				UpdateTransformations(sphereTransformations);
+				float vDotN = glm::dot(velocity, collisionNormal);
+				if (vDotN < 0.0f) {
+					velocity -= vDotN * collisionNormal;
+				}
+			}
+		}*/
 	}
 }
