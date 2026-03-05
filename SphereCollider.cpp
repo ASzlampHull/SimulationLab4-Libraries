@@ -1,4 +1,5 @@
 #include "SphereCollider.h"
+#include "PhysicsLibrary/pch.h"
 
 void SphereCollider::CalculateCollision(Collider* other, glm::vec3& velocity)
 {

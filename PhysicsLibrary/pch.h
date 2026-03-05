@@ -9,5 +9,10 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
+#include "PointToPlane.h"
+#include "SphereToSphere.h"
+#include "SphereLine.h"
+#include "SpherePlane.h"
+#include "LinePoint.h"
 
 #endif //PCH_H
